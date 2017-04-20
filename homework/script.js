@@ -35,7 +35,7 @@ listDiv.addEventListener("click", function(e) {
     console.log("selectedList", selectedList);
 
     updateLists();
-    updateItemsForSelectedList(;
+    updateItemsForSelectedList();
 });
 
 // ------------------------------------------------------
@@ -61,8 +61,7 @@ function updateLists() {
         aElement.appendChild(textNode);
 
         listDiv.appendChild(aElement);
-    );
-}
+});
 
 function updateItemsForSelectedList() {
     while (itemDiv.hasChildNodes()) {
@@ -148,7 +147,9 @@ closeButton.forEach(function(button, i) {
 
 function closePopups() {
     var popupsArray = Array.from(document.querySelectorAll(".popup"));
-    popupsArray.forEach(function(popup) {
+    popupsArray.forEach(function(popup) { 
         popup.style.display = "none";
     });
+};
 }
+
